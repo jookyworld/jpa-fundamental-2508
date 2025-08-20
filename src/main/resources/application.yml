@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: jpaFundamental2508
+  datasource:
+    url: jdbc:h2:./db_dev;MODE=MySQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true # SQL 예쁘게 출력
+        highlight_sql: true # SQL 색상 강조
+        use_sql_comments: true # SQL에 주석 추가
+logging:
+  level:
+    # SQL 실행할 때 파라미터 값 확인용 로그
+    org.hibernate.orm.jdbc.bind: TRACE
+    # SQL 실행 후 조회 결과 확인용 로그
+    org:hibernate:orm:jdbc:extract: TRACE
