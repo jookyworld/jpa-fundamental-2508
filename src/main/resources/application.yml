@@ -12,7 +12,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true # SQL 예쁘게 출력
@@ -24,3 +24,5 @@ logging:
     org.hibernate.orm.jdbc.bind: TRACE
     # SQL 실행 후 조회 결과 확인용 로그
     org:hibernate:orm:jdbc:extract: TRACE
+    org.springframework.transaction.interceptor: TRACE
+
